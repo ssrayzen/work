@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.box{
+			height: 100px;
+			width: 100px;
+			background: red;
+			position: absolute;
+			left: 1000px;
+		}
+				.box1{
+			height: 100px;
+			width: 100px;
+			background: red;
+			position: absolute;
+			left: 100px;
+			top: 500px;
+		}
+				.box2{
+			height: 100px;
+			width: 100px;
+			background: red;
+			position: absolute;
+			left: 300px;
+			top: 100px;
+		}
+				.box3{
+			height: 100px;
+			width: 100px;
+			background: red;
+			position: absolute;
+			left: 500px;
+			top: 390px;
+		}
+		.box-l{
+			height: 300px;
+			width: 200px;
+			background: orange;
+		}
+		.img{
+			height: 700px;
+			width: 1500px;
+		background-size: cover;
+			background-image: url(dom1.jpg);
+		}
+		.jpg{
+			height: 700px;
+			width: 1500px;
+			background-image: url(win.jpg);
+		}
+	</style>	
+</head>
+<body>
+	<div class="jpg">
+		
+	
+<div class="img ">
+
+	<div class="box-l">
+		<h2> очки <span class="score">
+		</span></h2>
+		<h2 class="t1">Яблоко</h2>
+		<h2 class="t2">Груша</h2>
+		<h2 class="t3">Жёлтый лист</h2>
+		<h2 class="t4">Птица</h2>
+	 </div>
+<div class="box">
+</div>
+<div class="box1">
+</div>
+<div class="box2">
+</div>
+<div class="box3">
+</div>
+</div>
+</div>
+
+ <script type="text/javascript">
+
+ 	let score = 1;
+ 	
+ 	function endGame(){
+		if(score == 5){
+			document.querySelector('.img').style.display = 'none';
+			document.querySelector('.jpg').style.display = 'block';
+			
+		}
+ 	}
+ 	
+ 		
+
+ 	document.querySelector('.box').onclick = function(){
+
+ 		document.querySelector('.box').style.display = 'none';
+ 	alert('Поздравляю!, ты нашёл яблоко!')
+ 		document.querySelector('.score').innerHTML = score;
+	score = score + 1;
+	document.querySelector('.t1').style.textDecoration = 'line-through';
+	endGame();
+ 	}
+ 	 	document.querySelector('.box1').onclick = function(){
+ 		document.querySelector('.box1').style.display = 'none';
+ 		alert('Поздравляю!, ты нашёл грушу!')
+ 		 		document.querySelector('.score').innerHTML = score;
+	score = score + 1;
+	document.querySelector('.t2').style.textDecoration = 'line-through';
+	endGame();
+ 	}
+ 	 	document.querySelector('.box2').onclick = function(){
+ 		document.querySelector('.box2').style.display = 'none';
+ 		alert('Поздравляю!, ты нашёл жёлтый лист!')
+ 		 		document.querySelector('.score').innerHTML = score;
+	score = score + 1;
+	document.querySelector('.t3').style.textDecoration = 'line-through';
+	endGame();
+ 	}
+ 	 	 	document.querySelector('.box3').onclick = function(){
+ 		document.querySelector('.box3').style.display = 'none';
+ 		alert('Поздравляю!, ты нашёл Птицу!')
+ 		 		document.querySelector('.score').innerHTML = score;
+	score = score + 1;
+	document.querySelector('.t4').style.textDecoration = 'line-through';
+	endGame();
+}
+
+ 	
+ </script>
+</body>
+</html>
